@@ -1,0 +1,37 @@
+@(monitor1:List[SubMonitor])
+
+<br>
+
+<h1>Monitor List information </h1>
+
+<table class="table table-striped">
+
+    <tr>
+        <th>Brand</th>
+        <th>Version</th>
+        <th>Codescreen</th>
+        <th>Colormonitor</th>
+        <th>Weigth</th>
+        <th>Number</th>
+        <th>Category</th>
+        <th>Connect</th>
+        <th>Mode</th>
+        <th>Contact</th>
+    </tr>
+    @for(monitor2<-monitor1){
+        <tr>
+            <td>@monitor2.getBrand</td>
+            <td>@monitor2.getVersion</td>
+            <td>@monitor2.getCodescreen</td>
+            <td>@monitor2.getColormonitor</td>
+            <td>@monitor2.getWeight</td>
+            <td>@monitor2.getNumber</td>
+            <td>@monitor2.getCategory</td>
+            <td>@monitor2.getConnect</td>
+            <td>@monitor2.getMode</td>
+            <td>@monitor2.getContact</td>
+        </tr>
+
+    }
+
+</table>

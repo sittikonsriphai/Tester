@@ -1,0 +1,51 @@
+@(MyForm:Form[MonitorHelper])
+@import helper._;
+<html>
+    <head>
+        <title>My Audio FormHelper </title>
+        <link rel="stylesheet"href="/assets/stylesheets/bootstrap/css/bootstrap.css">
+    </head>
+    <body>
+        <table class="table table-bordered table-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                        <ins> <center><h3>ข้อมูลสินค้า</h3></center></ins>
+                        @helper.form(action = routes.Application.PostMonitorHelper (),'class->"from-control"){
+
+                            @select(MyForm("brand"),options=Seq("ACER"->"ACER","ASUS"->"ASUS","HP"->"HP","AOC"->"AOC","BENQ"->"BENQ","LENOVO"->"LENOVO"),'_label->"Band")
+                            @inputText(MyForm("version"),'_label->"version",'size->"25",'maxlength->"40",'requied->"requied")
+                            @inputText(MyForm("codescreen"),'_label->"codescreen",'size->"25",'maxlength->"40",'requied->"requied")
+                            @inputRadioGroup(MyForm("strC"),options=Seq("Black"->"Black","White"->"White"),'_label->"colormonitor")
+                            @inputText(MyForm("weight"),'_label->"Weigth",'size->"25",'maxlength->"40",'requied->"requied")
+                            @inputText(MyForm("number"),'_label->"Number of Keys",'size->"25",'maxlength->"40",'requied->"requied")
+                            @select(MyForm("category"),options=Seq("LED"->"LED","IPS"->"IPS","TN"->"TN"),'_label->"category")
+                            @select(MyForm("connect"),options=Seq("HDMI"->"HDMI","VGA"->"VGA"),'_label->"connect")
+                            @select(MyForm("mode"),options=Seq("Srandard"->"Srandard","Text"->"Text","Intertet"->"Intertet","Gaming"->"Gaming","Movie"->"Movie","Sport"->"Sport"),'_label->"Mode")
+                            @select(MyForm("contact"),options=Seq("Button"->"Button","TouchScreen"->"TouchScreen"),'_label->"contact")
+
+
+
+
+
+
+
+
+
+                            <input type="submit" value="Save" class="badge-primary">
+                            <input type="reset" value="Cancel" class="btn-danger">
+
+
+                            }
+
+                    </div>
+                    <div class="col-sm-2"></div>
+
+                </div>
+
+            </div>
+        </table>
+
+    </body>
+</html>

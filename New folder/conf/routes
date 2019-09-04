@@ -1,0 +1,41 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                                    controllers.Application.Home()
+GET     /xDeathxTH                           controllers.Application.xDeathxTH()
+GET     /xDeathxTH2                          controllers.Application.xDeathxTH2()
+GET     /T1                                  controllers.Application.T1()
+GET     /T2                                  controllers.Application.T2()
+GET     /T3                                  controllers.Application.T3()
+GET     /Home                                  controllers.Application.Home()
+GET     /Header                                  controllers.Application.Header()
+GET     /Myprofile                                 controllers.Application.Myprofile()
+GET     /Footter                                  controllers.Application.Footter()
+GET     /Menu                                  controllers.Application.Menu()
+GET     /education                                 controllers.Application.education()
+GET     /BK                                 controllers.Application.BK()
+GET     /SubMonitor                                 controllers.Application.SubMonitor()
+GET     /ShowMonitorList                       controllers.Application.ShowMonitorList()
+GET     /Interested                             controllers.Application.Interested()
+GET     /goal                             controllers.Application.goal()
+GET     /Test                             controllers.Application.Test()
+GET     /CreateMonitor                             controllers.Application.CreateMonitor()
+
+
+POST     /NewMonitor                                controllers.Application.NewMonitor()
+GET     /ShowCreateMonitor                         controllers.Application.ShowMonitorList()
+
+
+GET     /MonitorFormHelper          controllers.Application.MonitorFormHelper()
+POST    /PostMonitorHelper          controllers.Application.PostMonitorHelper()
+
+
+
+
+#GET     /Showmain                               controllers.Application.Showmain()
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
